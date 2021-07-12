@@ -31,3 +31,17 @@ def persona(request):
     }
 
     return render(request, 'core/persona.html')
+
+
+def usuario(request):
+    return render(request, 'core/usuario.html')
+
+
+def auto(request):
+    return render(request, 'core/auto.html')
+
+def autoEdit(request):
+    return render(request, 'core/autoEdit.html')
+
+def usuarioEdit(request):
+    return render(request, 'core/usuarioEdit.html')
