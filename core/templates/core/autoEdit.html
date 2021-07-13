@@ -38,6 +38,39 @@
             </div>
  
         </header>
+<div class="container">
+    <div class="row text-uppercase" >
+        <table>
+            <b>
+            <tr class="text-primary">
+                <td>Patente</td>
+                <td>Marca</td>
+                <td>Modelo</td>
+                <td>Cliente</td>
+                <td>Color</td>
+            </tr>
+           </b>
+
+            {% for ve in listaAutos %}
+            <tr>
+
+
+            <td>{{ve.patente}}</td>
+            <td>{{ve.marca}}</td>
+            <td>{{ve.modelo}}</td>
+            <td>{{ve.cliente}}</td>
+            <td>{{ve.color}}</td>
+            <td><a href="{% url 'mod_vehiculo' ve.patente %}">Modificar</a></td>
+            <td><a href="{% url 'mod_del_vehiculo' ve.patente %}">Eliminar</a></td>
+        </tr>
+
+            {% endfor %}
+
+        </table>
+    </div>
+
+</div>
+
 
 
 

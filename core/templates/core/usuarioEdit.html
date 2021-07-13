@@ -37,7 +37,30 @@
                 </nav>
             </div>
         </header>
-    
+
+        <div class="container">
+            <div class="row text-uppercase" >
+                <table>
+                    <b>
+                    <tr class="text-primary">
+                        <td>Rut</td>
+                        <td>Nombre</td>
+                        <td>Telefono</td>
+                    </tr>
+                   </b>
+        
+                    {% for pe in listaPersona %}
+                    <tr>
+        
+        
+                    <td>{{pe.rutPersona}}</td>
+                    <td>{{pe.nombrePersona}}</td>
+                    <td>{{pe.numTelefono}}</td>
+                    <td><a href="{% url 'mod_persona' pe.rutPersona %}">Modificar</a></td>
+                    <td><a href="{% url 'mod_del_persona' pe.RutPersona %}">Eliminar</a></td>
+                </tr>
+        
+                    {% endfor %}
 
 
 
