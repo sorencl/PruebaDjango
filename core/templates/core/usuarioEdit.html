@@ -29,7 +29,6 @@
                     <!--links-->
                     <div class="col-auto">
                         <a href="{% url 'index' %}" class="text-reset pr-3">Home</a>
-                        <a href="{% url 'trabajos' %}" class="text-reset pr-3">Contactanos</a>
                         <a href="{% url 'infoauto' %}" class="text-reset pr-3">Nosotros</a>
                         <a href="{% url 'auto' %}" class="text-reset pr-3">Auto</a>
                         <a href="{% url 'usuario' %}" class="text-reset pr-3">Usuario</a>
@@ -39,13 +38,15 @@
         </header>
 
         <div class="container">
-            <div class="row text-uppercase" >
-                <table>
+            <div class="row text-uppercase" style="margin-top: 5%;" >
+                <h1 style="text-align: center;">Tabla de Trabajadores</h1>
+                <table class="table table-borderer">
                     <b>
                     <tr class="text-primary">
-                        <td>Rut</td>
-                        <td>Nombre</td>
-                        <td>Telefono</td>
+                        <th class="table-secondary">Rut</th>
+                        <th class="table-secondary">Nombre</th>
+                        <th class="table-secondary">Telefono</th>
+                        <th colspan="2" class="table-secondary">Opciones</th>
                     </tr>
                    </b>
         
@@ -53,14 +54,16 @@
                     <tr>
         
         
-                    <td>{{pe.rutPersona}}</td>
-                    <td>{{pe.nombrePersona}}</td>
-                    <td>{{pe.numTelefono}}</td>
-                    <td><a href="{% url 'mod_persona' pe.rutPersona %}">Modificar</a></td>
-                    <td><a href="{% url 'mod_del_persona' pe.RutPersona %}">Eliminar</a></td>
+                    <td class="table-primary">{{pe.rutPersona}}</td>
+                    <td class="table-info">{{pe.nombrePersona}}</td>
+                    <td class="table-primary">{{pe.numTelefono}}</td>
+                    <td class="table-info"><a href="{% url 'mod_persona' pe.rutPersona %}" class="btn btn-success">Modificar</a></td>
+                    <td class="table-info"><a href="{% url 'mod_del_persona' pe.rutPersona %}" class="btn btn-warning">Eliminar</a></td>
                 </tr>
         
                     {% endfor %}
+            </div>
+        </div>
 
 
 

@@ -10,15 +10,6 @@ def index(request):
 def infoauto(request):
     return render(request, 'core/infoauto.html')
 
-def trabajos(request):
-    return render(request, 'core/trabajos.html')
-
-def formulario(request):
-    return render(request, 'core/formulario.html')
-
-def persona(request):
-    return render(request, 'core/persona.html')
-
 
 def usuario(request):
     dato1 = {

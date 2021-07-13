@@ -29,7 +29,6 @@
                     <!--links-->
                     <div class="col-auto">
                         <a href="{% url 'index' %}" class="text-reset pr-3">Home</a>
-                        <a href="{% url 'trabajos' %}" class="text-reset pr-3">Contactanos</a>
                         <a href="{% url 'infoauto' %}" class="text-reset pr-3">Nosotros</a>
                         <a href="{% url 'auto' %}" class="text-reset pr-3">Auto</a>
                         <a href="{% url 'usuario' %}" class="text-reset pr-3">Usuario</a>
@@ -40,14 +39,16 @@
         </header>
 <div class="container">
     <div class="row text-uppercase" >
-        <table>
+        <h1 style="text-align: center;">Tabla de Autos</h1>
+        <table class="table table-bordered">
             <b>
             <tr class="text-primary">
-                <td>Patente</td>
-                <td>Marca</td>
-                <td>Modelo</td>
-                <td>Cliente</td>
-                <td>Color</td>
+                <th class="table-secondary">Patente</th>
+                <th class="table-secondary">Marca</th>
+                <th class="table-secondary">Modelo</th>
+                <th class="table-secondary">Cliente</th>
+                <th class="table-secondary">Color</th>
+                <th colspan="2" class="table-secondary">Opciones</th>
             </tr>
            </b>
 
@@ -55,17 +56,16 @@
             <tr>
 
 
-            <td>{{ve.patente}}</td>
-            <td>{{ve.marca}}</td>
-            <td>{{ve.modelo}}</td>
-            <td>{{ve.cliente}}</td>
-            <td>{{ve.color}}</td>
-            <td><a href="{% url 'mod_vehiculo' ve.patente %}">Modificar</a></td>
-            <td><a href="{% url 'mod_del_vehiculo' ve.patente %}">Eliminar</a></td>
+            <td class="table-primary">{{ve.patente}}</td>
+            <td class="table-info">{{ve.marca}}</td>
+            <td class="table-primary">{{ve.modelo}}</td>
+            <td class="table-info">{{ve.cliente}}</td>
+            <td class="table-primary">{{ve.color}}</td>
+            <td class="table-info"><a href="{% url 'mod_vehiculo' ve.patente %}" class="btn btn-success">Modificar</a></td>
+            <td class="table-info"><a href="{% url 'mod_del_vehiculo' ve.patente %}" class="btn btn-warning">Eliminar</a></td>
         </tr>
 
             {% endfor %}
-
         </table>
     </div>
 

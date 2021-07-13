@@ -131,3 +131,10 @@
 .table{ 
     background-color: white;
 }
+
+.fondofacha{
+    background: url('/static/core/img/fondo-02.jpg') no-repeat center;
+    background-size: cover;
+    padding: 0px;
+}
+
