@@ -122,6 +122,8 @@
     margin-bottom: 200px;
 }
 
+
+
 .fondo{
     background: url('/static/core/img/fondo2.jpg') no-repeat center;
     background-size: cover;
@@ -129,12 +131,8 @@
 }
 
 .table{ 
-    background-color: white;
+    background-color: rgb(104, 104, 104);
 }
 
-.fondofacha{
-    background: url('/static/core/img/fondo-02.jpg') no-repeat center;
-    background-size: cover;
-    padding: 0px;
-}
+
 

@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/resources/demos/style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
 
     <link rel="stylesheet" href="{% static 'core/css/style.css' %}">
@@ -12,7 +13,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>Autos</title>
 </head>
-<body class="fondofacha">
+
+<body>
     <!--Header-->
     <header class="header bg-dark">
         <div class="container">
@@ -35,7 +37,7 @@
             </nav>
         </div>
     </header>
-    <div style="margin-top: 12%;">
+    <div style="margin-top: 12%;" class="fondo2">
         <h1 class="text-uppercase text-center">Modificar Trabajador</h1>
         <form method="POST" action="" id="formulario"> 
             {% csrf_token %}
